@@ -50,7 +50,7 @@ export default function ShowCollection() {
             {colectionAPI.Status === "loading"
                 ? <Loading/>
                 : colectionAPI.Status === "rejected"
-                    ? <h1>Collection Loading has Error</h1>
+                    ? <h1>Erreur de chargement de la collection</h1>
                     : ((colectionAPI.Status === "idle") && (colection)) ?
                         <div className="collectionShowCountainer">
                             <div className="collShowHead">
@@ -63,21 +63,21 @@ export default function ShowCollection() {
                                     <span> watchList</span>
                                 </div>
                                 <div>
-                                    <a className="icon" href={colection.website}>language</a>
-                                    <a className="icon">share</a>
+                                    <a className="icon" href={colection.website}>langue</a>
+                                    <a className="icon">partager</a>
                                 </div>
                             </div>
                             <div className="colltext">
-                                <h1>{colection.name}{colection.verify && <span className="icon">verified</span>}</h1>
-                                <h5>created by<a href="">{colection.careator}</a>{colection.careatorVerify && <span className="icon">verified</span>}</h5>
+                                <h1>{colection.name}{colection.verify && <span className="icon">Vérifié</span>}</h1>
+                                <h5>Créer par<a href="">{colection.careator}</a>{colection.careatorVerify && <span className="icon">Vérifié</span>}</h5>
                                 <div className="collDetails">
                                     <div>
                                         <span>{Object.keys(colection.listNFTs).length}</span>
-                                        <small>items</small>
+                                        <small>éléments</small>
                                     </div>
                                     <div>
                                         <span>{colection.owners.length}</span>
-                                        <small>owners</small>
+                                        <small>propriétaire</small>
                                     </div>
                                     <div>
                                         <span><img src={"../../Images/unitIcon/" + colection.unit + ".png"} className="unit" alt="" />{colection.floorPrice}</span>
@@ -85,7 +85,7 @@ export default function ShowCollection() {
                                     </div>
                                     <div>
                                         <span><img src={"../../Images/unitIcon/" + colection.unit + ".png"} className="unit" alt="" />{colection.volumeTraded}</span>
-                                        <small>volume traded</small>
+                                        <small>volume échangé</small>
                                     </div>
                                 </div>
                                 <div className="collAbout">
@@ -95,8 +95,8 @@ export default function ShowCollection() {
                                 </div>
                             </div>
                             <div className="tabColl">
-                                <div className="tab_active " onClick={(e) => activeClass(e, "tab_active", "itemShow")}><span className="icon">grid_on</span>Items</div>
-                                <div className="" onClick={(e) => activeClass(e, "tab_active", "chartShow")}><span className="icon">insights</span>Activity</div>
+                                <div className="tab_active " onClick={(e) => activeClass(e, "tab_active", "itemShow")}><span className="icon">grid_on</span>Eléments</div>
+                                <div className="" onClick={(e) => activeClass(e, "tab_active", "chartShow")}><span className="icon">insights</span>Activité</div>
                             </div>
                             <main>
                                 <div id="itemShow" className="show_content">
@@ -110,7 +110,7 @@ export default function ShowCollection() {
                         </div>
                         :
                         <>
-                            <h1>Collection Not find</h1>
+                            <h1>Collection Introuvable</h1>
                         </>
             }
         </>

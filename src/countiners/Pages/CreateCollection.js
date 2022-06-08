@@ -23,17 +23,17 @@ export default function CreateCollection() {
     return (
         <>
             <div className="Create">
-                <h1>Create New Collection</h1>
+                <h1>Créer une collection</h1>
                 <form className="creatForm">
                     <p className="detaileForm">
-                        <i >*</i> Required fields
+                        <i >*</i> Champs recquis
                     </p>
                     <div className="formSection">
                         <label className="lable">
                             Logo image<i> *</i>
                         </label>
                         <span className="detaileForm">
-                            This image will also be used for navigation. 350 x 350 recommended.
+                        Cette image sera également utilisée pour la navigation. 350 x 350 recommandé.
                         </span>
                         <div className='inputImage'>
                             <input id="media" onChange={(e) => onImageChange(e)} name="Logo" accept="image/*,video/*,audio/*,webgl/*,.glb,.gltf" type="file" autoComplete="off" tabIndex="-1" required="required" />
@@ -47,10 +47,10 @@ export default function CreateCollection() {
                     </div>
                     <div className="formSection">
                         <label className="lable">
-                            Featured image
+                        L'image sélectionnée
                         </label>
                         <span className="detaileForm">
-                            This image will be used for featuring your collection on the homepage, category pages, or other promotional areas of OpenSea. 600 x 400 recommended.
+                        Cette image sera utilisée pour présenter votre collection sur la page d'accueil, les pages de catégories ou d'autres zones promotionnelles d'OpenSea. 600 x 400 recommandé.
                         </span>
                         <div className='inputImage'>
                             <input id="media" onChange={(e) => onImageChange(e)} name="Featur" accept="image/*,video/*,audio/*,webgl/*,.glb,.gltf" type="file" autoComplete="off" tabIndex="-1" required="" />
@@ -64,10 +64,10 @@ export default function CreateCollection() {
                     </div>
                     <div className="formSection">
                         <label className="lable">
-                            Banner image
+                            Bannière image
                         </label>
                         <span className="detaileForm">
-                            This image will appear at the top of your collection page. Avoid including too much text in this banner image, as the dimensions change on different devices. 1400 x 400 recommended.
+                        Cette image apparaîtra en haut de votre page de collection. Évitez d'inclure trop de texte dans cette image de bannière, car les dimensions changent sur différents appareils. 1400 x 400 recommandé.
                         </span>
                         <div className='inputImage'>
                             <input id="media" onChange={(e) => onImageChange(e)} name="Banner" accept="image/*,video/*,audio/*,webgl/*,.glb,.gltf" type="file" autoComplete="off" tabIndex="-1" required="" />
@@ -80,26 +80,26 @@ export default function CreateCollection() {
                         </div>
                     </div>
                     <div className='formSection'>
-                        <label className="lable">Name<i> *</i></label>
+                        <label className="lable">Nom<i> *</i></label>
                         <input value={nameNFT} onChange={(e) => setNameNFT(e.target.value)} autoCapitalize="off" autoComplete="off" autoCorrect="off" className="formInput" data-testid="Input" id="name" name="name" placeholder="Example: Treasures of Diamond" required="required" spellCheck="false" type="text" />
                     </div>
                     <div className="formSection">
                         <label className="lable">URL</label>
-                        <span className="detaileForm"> Customize your URL on NFT Market. Must only contain lowercase letters, numbers, and hyphens.</span>
+                        <span className="detaileForm"> Personnalisez votre URL sur NFT Market. Ne doit contenir que des lettres minuscules, des chiffres et des tirets.</span>
                         <div className='urlCollection'>
-                            <span>https://NFTMarket/collection/</span>
+                            <span>https://RIAD/collection/</span>
                             <input autoCapitalize="off" autoComplete="off" autoCorrect="off" className="formInput" data-testid="Input" id="external_link" name="external_link" placeholder="Treasures-of-Diamond" spellCheck="false" type="text" />
                         </div>
                     </div>
                     <div className="formSection">
                         <label className="lable">Description</label>
-                        <span className="detaileForm">Markdown syntax is supported. 0 of 1000 characters used.</span>
+                        <span className="detaileForm">La syntaxe Markdown est prise en charge. 0 de 1000 caractères utilisés.</span>
                         <textarea id="description" name="description" placeholder="Provide a detailed description of your item." rows="4" className="formInput">
                         </textarea>
                     </div>
                     <div className="formSection">
-                        <label className="lable">Category</label>
-                        <p className="propertyDetails">Adding a category will help make your item discoverable on NFT Market.</p>
+                        <label className="lable">Catégories</label>
+                        <p className="propertyDetails">L'ajout d'une catégorie vous aidera à rendre votre article visible sur NFT Market.</p>
                         <div className='row'>
                             {category.list.map((row, index) =>
                                 <div key={index} className='col-lg-3 col-sm-4 col-6 p-2 position-relative'>
@@ -116,7 +116,7 @@ export default function CreateCollection() {
                     </div>
                     <div className="formSection">
                         <label className="lable">Blockchain</label>
-                        <p className="propertyDetails">Choos your space</p>
+                        <p className="propertyDetails">Choisissez votre espace</p>
                         <div className='row'>
                             {BlockChaine.list.map((row, index) =>
                                 <div key={index} className='col-lg-3 col-sm-4 col-6 p-2 position-relative'>
@@ -134,7 +134,7 @@ export default function CreateCollection() {
                     <div className="formSection">
                         <div className='d-flex justify-content-between px-4'>
                             <button type="submit" onClick={() => { document.getElementsByClassName('creatForm')[0].classList.add('Invalid') }} className="btn btn-primary" disabled="">Create</button>
-                            <button type="reset" className="btn btn-outline-danger" disabled="disable">Delete Item</button>
+                            <button type="reset" className="btn btn-outline-danger" disabled="disable">Supprimer l'item</button>
                         </div>
                     </div>
                 </form >

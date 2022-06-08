@@ -25,7 +25,7 @@ export default function Chart(props) {
     {props.data ? <Line data={props.data} options={props.options} /> 
     : <div className='d-flex justify-content-center align-items-center flex-column'>
         <span className='icon px-3 py-0 m-3' style={{ fontSize: "6em", border: "1px solid var(--borderGray)", borderRadius: "8px", color: "var(--textDark)" }}>area_chart</span>
-        <p  className='m-0'>No History Price</p>
+        <p  className='m-0'>Pas d'historique de prix</p>
       </div>}
   </>
   )

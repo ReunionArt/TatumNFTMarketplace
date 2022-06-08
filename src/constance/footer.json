@@ -1,39 +1,38 @@
 {
     "name": "footer",
-    "findUsText":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-    "location":"9878/25 sec 9 rohini 35",
-    "phoneNumber":"+91-9999878398",
-    "email":" info@marketplace.com",
+    "findUsText":"SAS Réunion Island Crypto Lab - Ile de la Réunion",
+    "location":"85 rue Leconte de Lisle 97434 Saint-Gilles les Bains",
+    "phoneNumber":"(+262) 693 88 98 73",
+    "email":"admin@ricl.re",
     "quickLinks1":[
-        {"name":"Image Rectoucing","url":"/"},
-        {"name":"Clipping Path","url":"/"},
-        {"name":"Hollow Man Montage","url":"/"},
-        {"name":"Ebay & Amazon","url":"/"},
-        {"name":"Hair Masking/Clipping","url":"/"},
-        {"name":"Image Cropping","url":"/"}
+        {"name":"RIC Lab","url":"https://ricl.re"},
+        {"name":"RIAD","url":"https://riad.re"},
+        {"name":"","url":"/"},
+        {"name":"","url":"/"},
+        {"name":"","url":"/"},
+        {"name":"","url":"/"}
     ],
     "quickLinks2":[
-        {"name":"Remove Background","url":"/"},
-        {"name":"Logo Design","url":"/"},
-        {"name":"Vectorization","url":"/"},
-        {"name":"Shadows & Mirror Reflection","url":"/"},
-        {"name":"Hair Masking/Clipping","url":"/"},
-        {"name":"Image Cropping","url":"/"}
+        {"name":"RICL générateur","url":"https://wonderful-heliotrope-45607e.netlify.app/"},
+        {"name":"","url":"/"},
+        {"name":"","url":"/"},
+        {"name":"","url":"/"},
+        {"name":"","url":"/"},
+        {"name":"","url":"/"}
     ],
     "followUs":[
-        {"name":"Lorem Ipsum is simply dummy text of the printing...","url":"https://..../"},
-        {"name":"Lorem Ipsum is simply dummy text of the printing...","url":"https://..../"},
-        {"name":"Lorem Ipsum is simply dummy text of the printing...","url":"https://..../"}
+        {"name":"RIA Geck - NFTs du projet RIAD","url":"https://www.riad.re/ria-geck/"},
+        {"name":"Fonzy974 - Président RIC Lab","url":"https://twitter.com/Fonzy974"},
+        {"name":"","url":"https://..../"}
     ],
     "copyright":{
-        "text":"Copyright @2022 | Designed With by: ",
-        "designer":"shahedmoez",
-        "url":"https://t.me/shahedmoez"
+        "text":"Copyright @2022 ",
+        "designer":"RIC Lab",
+        "url":"https://ricl.re"
     },
-    "facebook":"https://www.facebook.com/shahed.moez",
-    "twitter":"https://twitter.com/shahedmoez",
-    "linkedin":"https://www.linkedin.com/in/shahed-moez-1ba70766/",
-    "instagram":"https://www.instagram.com/shahedmoez/"
+    "facebook":"https://www.facebook.com/Reunion-Island-Crypto-Lab-105257825517789",
+    "twitter":"https://twitter.com/ReunionArt",
+    "instagram":"https://www.instagram.com/reunionart/"
 }
     
 

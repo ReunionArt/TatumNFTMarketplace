@@ -48,7 +48,7 @@ export default function Explore(props) {
         <div id="filterIcon" className="collapse icon" data-bs-toggle="collapse" data-bs-target="#filter , #filterIcon">filter_list</div>
         <div id="filter" className="filter collapse show">
           <div className="filterHead">
-            <h6><span className="icon">filter_list</span> Filter</h6>
+            <h6><span className="icon">filter_list</span> Filtrer</h6>
             <span className="icon" data-bs-toggle="collapse" data-bs-target="#filter , #filterIcon">arrow_back</span>
           </div>
           <div className="filterItem">
@@ -59,25 +59,25 @@ export default function Explore(props) {
             <div id="filter1" className="showMore collapse show">
               <div className="itemWithcheck">
                 <input type="checkbox" />
-                <span>Buy now</span>
+                <span>Acheter</span>
               </div>
               <div className="itemWithcheck">
                 <input type="checkbox" />
-                <span>On Auction</span>
+                <span>En vente</span>
               </div>
               <div className="itemWithcheck">
                 <input type="checkbox" />
-                <span>New</span>
+                <span>Nouveauté</span>
               </div>
               <div className="itemWithcheck">
                 <input type="checkbox" />
-                <span>Has Offer</span>
+                <span>A une offre</span>
               </div>
             </div>
           </div>
           <div className="filterItem">
             <div className="w-100 d-flex justify-content-between align-items-center">
-              <h6>Price</h6>
+              <h6>Prix</h6>
               <span className="icon" data-bs-toggle="collapse" data-bs-target="#filter2">expand_more</span>
             </div>
             <div id="filter2" className="showMore collapse show">
@@ -100,13 +100,13 @@ export default function Explore(props) {
                 </div>
               </div>
               <div className="PriceMinMax">
-                <input type="number" min="0" placeholder="min" /> of <input type="number" min="1" placeholder="max" />
+                <input type="number" min="0" placeholder="min" /> de <input type="number" min="1" placeholder="max" />
               </div>
             </div>
           </div>
           <div className="filterItem">
             <div className="w-100 d-flex justify-content-between align-items-center">
-              <h6>Categories</h6>
+              <h6>Catégories</h6>
               <span className="icon" data-bs-toggle="collapse" data-bs-target="#filter3">expand_more</span>
             </div>
             <div id="filter3" className="showMore collapse">
@@ -127,7 +127,7 @@ export default function Explore(props) {
           </div>
           <div className="filterItem">
             <div className="w-100 d-flex justify-content-between align-items-center">
-              <h6>Chains</h6>
+              <h6>Chaînes</h6>
               <span className="icon" data-bs-toggle="collapse" data-bs-target="#filter4">expand_more</span>
             </div>
             <div id="filter4" className="showMore collapse">
@@ -157,7 +157,7 @@ export default function Explore(props) {
           :marketNFTs.Status === "loading"?<Loading/>
           :NFTs.listNFTs.length <= 0 ?
           <div className="">
-            <h6>No result to Show</h6>
+            <h6>Aucun résultat</h6>
           </div>
           : <div className="cardCountiner" onScroll={(e) => handelScroll(e)}>
             {NFTs.listNFTs.map((row, index) =>
@@ -171,7 +171,7 @@ export default function Explore(props) {
                   <div className="cardDetailse">
                     <div className="d-flex justify-content-between align-items-center">
                       <span>{NFTs.name}</span>
-                      <span>Price</span>
+                      <span>Prix</span>
                     </div>
                     <div className="d-flex justify-content-between align-items-center">
                       {row.metadata && <h6>{row.metadata.name}#{row.tokenId}</h6>}
@@ -180,7 +180,7 @@ export default function Explore(props) {
                   </div>
                   <div className="cardBottom">
                     <input type="checkbox" onChange={(e) => dispatch(likeNFT())} />
-                    {row.price && <Link to={"/ShowNFT/" + row.chain + "/" + row.contractAddress + "/" + row.tokenId}>Buy now</Link>}
+                    {row.price && <Link to={"/ShowNFT/" + row.chain + "/" + row.contractAddress + "/" + row.tokenId}>Acheter</Link>}
                     <span>{row.like} <i className="fa-regular fa-heart"></i></span>
                   </div>
                 </div>

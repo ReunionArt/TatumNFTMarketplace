@@ -73,8 +73,8 @@ export default function Home() {
         <div className="col-sm-11">
           <section >
             <div className="d-flex justify-content-between">
-              <h5>Auction <small className="update">(Auction copmleted in next update)</small></h5>
-              <button className="btn showBtn" onClick={(e) => ShowToggle(e, "auctionCard")}>Show All</button>
+              <h5>Auction <small className="update">(Vente aux enchères terminée dans la prochaine mise à jour)</small></h5>
+              <button className="btn showBtn" onClick={(e) => ShowToggle(e, "auctionCard")}>Montrer tout</button>
             </div>
             <div id="auctionCard" className="row justify-content-around mx-auto">
               {auction.list.map((row, index) =>
@@ -87,8 +87,8 @@ export default function Home() {
           </section>
           <section >
             <div className="d-flex justify-content-between">
-              <h5>Market's news<small className="update">(copmleted in next update)</small> </h5>
-              <button className="btn showBtn" onClick={(e) => ShowToggle(e, "MarketNews")}>Show All</button>
+              <h5>RIAD news<small className="update">(terminé dans la prochaine mise à jour)</small> </h5>
+              <button className="btn showBtn" onClick={(e) => ShowToggle(e, "MarketNews")}>Montrer tout</button>
             </div>
             <div id="MarketNews" className="row  mx-auto py-2">
               {news.list.map((row, index) =>
@@ -98,17 +98,17 @@ export default function Home() {
                       <img src={row.image} alt="" />
                     </div>
                     <h1>{row.title}</h1>
-                    <button className="btn"><a href={"/news" + row.title}>Read More</a></button>
+                    <button className="btn"><a href={"/news" + row.title}>Lire plus</a></button>
                   </div>
                 </div>
               )}
-              <button onClick={(e) => goToTop(e)} className="btn showBtn text-end">Co to Top</button>
+              <button onClick={(e) => goToTop(e)} className="btn showBtn text-end">Vers le haut</button>
             </div>
           </section>
           <section >
             <div className="d-flex justify-content-between">
-              <h5>Top collections over last 7 days</h5>
-              <button className="btn showBtn" onClick={(e) => ShowToggle(e, "topCollections")}>Show All</button>
+              <h5>Top collections sur 7 jours</h5>
+              <button className="btn showBtn" onClick={(e) => ShowToggle(e, "topCollections")}>Montrer tout</button>
             </div>
             <div id="topCollections" className="row  mx-auto py-2">
               {topTrend.list.map((row, index) =>
@@ -119,13 +119,13 @@ export default function Home() {
                     </div>
                     <div>
                       <h1>{row.name}</h1>
-                      <h6>price: {row.price} <img alt='' className='unit' src={'Images/unitIcon/' + row.unit + '.png'} /></h6>
-                      <button className="btn"><a href={"/ShowNFT/"+row.chain+"/"+row.address+"/"+row.tokenId}>Detailes</a></button>
+                      <h6>prix : {row.price} <img alt='' className='unit' src={'Images/unitIcon/' + row.unit + '.png'} /></h6>
+                      <button className="btn"><a href={"/ShowNFT/"+row.chain+"/"+row.address+"/"+row.tokenId}>Détails</a></button>
                     </div>
                   </div>
                 </div>
               )}
-              <button onClick={(e) => goToTop(e)} className="btn showBtn text-end">Co to Top</button>
+              <button onClick={(e) => goToTop(e)} className="btn showBtn text-end">Vers le haut</button>
             </div>
           </section>
         </div>

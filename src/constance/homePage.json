@@ -1,13 +1,13 @@
 {
     "name": "home Page",
-    "marketplaceNmae":"NFT Market",
-    "discribtion":"NFT Marketplace with Tatum APIs. in this market you can Buy, Sell and create Express NFT, Royalti NFT and deploy your smart contract.",
+    "marketplaceNmae":"RIAD",
+    "discribtion":"RIAD (Réunion Island Art Digitizer) est le premier marché de NFTs dédiés aux artistes de l'ile de la Réunion",
     "wellcomeAlert":
         {
-            "title":"Wellcome to NFT Market with tatum APIs.",
-            "massage":"All transaction requests using KMS method and not using Privet key but we suggested you check all requests of wallet before confirmed it.",
-            "alertMasage":"!this website not final project!",
-            "dontshowMessage":"don't show this message again"
+            "title":"Bienvenu sur RIAD",
+            "massage":"Toutes les demandes de transaction utilisent la méthode KMS et n'utilisent pas de clé privée, mais nous vous suggérons de vérifier toutes les demandes de portefeuille avant de les confirmer.",
+            "alertMasage":"!Ce site web n'est pas finalisé",
+            "dontshowMessage":"Ne plus afficher le message."
         }
 }
     

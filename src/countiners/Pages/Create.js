@@ -125,13 +125,13 @@ export default function Create() {
   return (
     <>
       <div className="Create">
-        <h1>Create New NFT</h1>
+        <h1>Créer un nouveau NFT</h1>
         <div className='tabDiv'>
           <div className='tabItem'>
             <input type="radio" name='express' checked={isExpress} onChange={() => { setIsExpress(true); setUserSmartContract(""); setRoyalti(false) }} />
             <div>
               <h3>Express NFT</h3>
-              <small>create NFT without fee</small>
+              <small>créer un NFT sans frais</small>
               <span></span>
             </div>
           </div>
@@ -139,21 +139,21 @@ export default function Create() {
             <input type="radio" name='express' checked={!isExpress} onChange={() => { setIsExpress(false) }} />
             <div>
               <h3>Custom NFT</h3>
-              <small>create NFT in your Smart contract</small>
+              <small>Créer un NFT dans un Smart contract</small>
               <span></span>
             </div>
           </div>
         </div>
         <form id="CreateForm" className="creatForm">
           <p className="detaileForm">
-            <i >*</i> Required fields
+            <i >*</i> Champs obligatoires
           </p>
           <div className="formSection">
             <label className="lable">
-              Image, Video, Audio, or 3D Model<i> *</i>
+              Image, Video, Audio et 3D Model<i> *</i>
             </label>
             <span className="detaileForm">
-              File types supported: JPG, PNG, GIF, SVG, MP4, WEBM, MP3, WAV, OGG,GLB, GLTF. Max size: 50 MB
+              Fichiers supportés : JPG, PNG, GIF, SVG, MP4, WEBM, MP3, WAV, OGG,GLB, GLTF. Taille maximale: 50 MB
             </span>
             <div className='inputImage'>
               <input id="media" onChange={(e) => onImageChange(e)} name="media" accept="image/*,video/*,audio/*,webgl/*,.glb,.gltf" type="file" autoComplete="off" tabIndex="-1" required="required" />
@@ -166,33 +166,33 @@ export default function Create() {
             </div>
           </div>
           <div className='formSection'>
-            <label className="lable">Name<i> *</i></label>
+            <label className="lable">Nom<i> *</i></label>
             <input value={nameNFT} onChange={(e) => setNameNFT(e.target.value)} autoCapitalize="off" autoComplete="off" autoCorrect="off" className="formInput" data-testid="Input" id="name" name="name" placeholder="Item name" required="required" spellCheck="false" type="text" />
           </div>
           <div className="formSection">
-            <label className="lable">External link</label>
-            <span className="detaileForm"> Market Place will include a link to this URL on this item's detail page, so that users can click to learn more about it. You are welcome to link to your own webpage with more details.</span>
+            <label className="lable">Lien externe</label>
+            <span className="detaileForm"> RIAD inclura un lien vers cette URL sur la page de détail de cet article, afin que les utilisateurs puissent cliquer pour en savoir plus à son sujet. Vous êtes invités à créer un lien vers votre propre page Web avec plus de détails.</span>
             <input onChange={(e) => setExternalLink(e.target.value)} autoCapitalize="off" autoComplete="off" autoCorrect="off" className="formInput" data-testid="Input" id="external_link" name="external_link" placeholder="https://yoursite.io/item/" spellCheck="false" type="text" />
           </div>
           <div className="formSection">
-            <label className="lable">Youtube link</label>
-            <span className="detaileForm"> Market Place will include a link to this URL on this item's detail page, so that users can click to learn more about it. You are welcome to link to your own webpage with more details.</span>
+            <label className="lable">Lien Youtube</label>
+            <span className="detaileForm"> RIAD inclura un lien vers cette URL sur la page de détail de cet article, afin que les utilisateurs puissent cliquer pour en savoir plus à son sujet. Vous êtes invités à créer un lien vers votre propre page Web avec plus de détails.</span>
             <input onChange={(e) => setYoutube_url(e.target.value)} autoCapitalize="off" autoComplete="off" autoCorrect="off" className="formInput" data-testid="Input" id="external_link" name="external_link" placeholder="https://yoursite.io/item/" spellCheck="false" type="text" />
           </div>
           <div className="formSection">
             <label className="lable">Description</label>
-            <span className="detaileForm">The description will be included on the item's detail page underneath its image.</span>
+            <span className="detaileForm">La description sera incluse sur la page de détail de l'article sous son image.</span>
             <textarea onChange={(e) => setDescription(e.target.value)} id="description" name="description" placeholder="Provide a detailed description of your item." rows="4" className="formInput">
             </textarea>
           </div>
           {!isExpress && <div className='formSection'>
             <label className="lable">Smart Contract<i> *</i></label>
-            <span className="detaileForm">impor your Smart Conteract to mint Your Nft or select default and use Our smart Contract</span>
+            <span className="detaileForm">importez votre Smart Contract pour frapper votre Nft ou sélectionnez par défaut et utilisez notre contrat intelligent</span>
             <div className='choosDefultContract'>
-              <div className="lable"  >I haave Smart Contract Address:</div>
+              <div className="lable"  >J'ai une adresse de Samrt Contract :</div>
               <div>
                 <input required onChange={(e) => setUserSmartContract(e.target.value)} autoCapitalize="off" autoComplete="on" autoCorrect="on" className="formInputsmartContract col-sm-8" data-testid="Input" id="smartContract" name="smartContract" placeholder="Smart Contract Address" spellCheck="false" type="text" />
-                <Link to={"/Contract"} className='btn btn-primary col-sm-3 addCollection'>Deploy Contract</Link>
+                <Link to={"/Contract"} className='btn btn-primary col-sm-3 addCollection'>Deployer le Contrat</Link>
               </div>
             </div>
           </div>}
@@ -227,9 +227,9 @@ export default function Create() {
               <div>
                 <div className='d-flex align-items-center'>
                   <span className="icon pe-2">label_important</span>
-                  <span className="lable">Properties</span>
+                  <span className="lable">Propriétés</span>
                 </div>
-                <p className="propertyDetails">Textual traits that show up as rectangles</p>
+                <p className="propertyDetails">Traits textuels qui apparaissent sous forme de rectangles</p>
               </div>
               <button aria-label="Add properties" type="button" className="btn btn-outline-primary addProperty" data-bs-toggle="modal" data-bs-target="#ModalProperty">
                 <span className="icon">add</span>
@@ -250,12 +250,12 @@ export default function Create() {
               <div>
                 <div className='d-flex align-items-center'>
                   <span className="icon pe-2">star_rate</span>
-                  <span className="lable">Levels</span>
+                  <span className="lable">Niveaux</span>
                 </div>
-                <p className="propertyDetails">Numerical traits that show as a progress bar</p>
+                <p className="propertyDetails">Caractéristiques numériques qui s'affichent sous forme de barre de progression</p>
               </div>
               <button aria-label="Add properties" type="button" className="btn btn-outline-primary addProperty" data-bs-toggle="modal" data-bs-target="#ModalLevel">
-                <span className="icon">add</span>
+                <span className="icon">ajouter</span>
               </button>
             </div>
             <div className='row '>
@@ -282,7 +282,7 @@ export default function Create() {
                   <span className="icon pe-2">bar_chart</span>
                   <span className="lable">Stats</span>
                 </div>
-                <p className="propertyDetails">Numerical traits that just show as numbers</p>
+                <p className="propertyDetails">Caractéristiques numériques qui s'affichent simplement sous forme de nombres</p>
               </div>
               <button aria-label="Add properties" type="button" className="btn btn-outline-primary addProperty" data-bs-toggle="modal" data-bs-target="#ModalStats">
                 <span className="icon">add</span>
@@ -310,9 +310,9 @@ export default function Create() {
               <div>
                 <div className='d-flex align-items-center'>
                   <span className="icon pe-2">warning</span>
-                  <span className="lable">Explicit &amp; Sensitive Content</span>
+                  <span className="lable">Explicite &amp; Contenu sensible</span>
                 </div>
-                <p className="propertyDetails">Set this item as explicit and sensitive content.<span className="icon toolip" tolip="Setting your asset as explicit and sensitive content, like pornography and other not safe for work (NSFW) content, will protect users with safe search while browsing NFT Market.">info</span></p>
+                <p className="propertyDetails">Définissez cet élément comme contenu explicite et sensible.<span className="icon toolip" tolip="Définir votre actif comme un contenu explicite et sensible, comme la pornographie et d'autres contenus non sûrs pour le travail (NSFW), protégera les utilisateurs avec une recherche sécurisée lors de la navigation sur NFT Market.">info</span></p>
               </div>
               <div className="check">
                 <input type="checkbox" onChange={(e) => { e.target.checked ? setSensitiveContent(true) : setSensitiveContent(false) }} />
@@ -323,7 +323,7 @@ export default function Create() {
           </div>
           <div className="formSection">
             <label className="lable">Blockchain</label>
-            <p className="propertyDetails">Choos your space</p>
+            <p className="propertyDetails">CHOISISSEZ VOTRE ESPACE</p>
             <div className='row'>
               {BlockChaine.list.map((row, index) =>
                 <div key={index} className='col-lg-3 col-sm-4 col-6 p-2 position-relative'>
@@ -340,7 +340,7 @@ export default function Create() {
           </div>
           {isCELO && <div className='row px-2'>
             <label className="lable">
-              CELO blockchain need to select feeCurrency:
+            La blockchain CELO doit sélectionner la devise des frais :
             </label>
             {FeeCurrency.list.map((row, index) =>
               <div key={index} className='col-sm-6 col-md-4  p-1 position-relative'>
@@ -357,7 +357,7 @@ export default function Create() {
           {!isExpress && <div className='royaltyDeploy '>
             <div className="d-flex justify-content-between align-items-center py-2">
               <label className="lable">
-                Create a Royalty:<small>your smartcontract must be supported Royalty</small><a href="/blog/RoyaltyNFTs"> more info</a>
+                Créer des royalties<small>votre smartcontract doit être pris en charge</small><a href="/blog/RoyaltyNFTs"> plus d'infos</a>
               </label>
               <div className="check">
                 <input type="checkbox" onChange={(e) => { if (e.target.checked) { setRoyalti(true) } else { setRoyalti(false); setPercentage(false); setFixCashback(false) } }} />
@@ -369,14 +369,14 @@ export default function Create() {
               <div className="choosDefultContract">
                 <div className="p-1">
                   <div className='d-flex align-items-center '>
-                    <span className='d-flex'>Percentage cashback</span>
-                    <div><input className='inputNumber' required type="Number" min="0" max="10" value={percentage} onChange={(e) => { setPercentage(e.target.value) }} />% of price</div>
+                    <span className='d-flex'>Pourcentage cashback</span>
+                    <div><input className='inputNumber' required type="Number" min="0" max="10" value={percentage} onChange={(e) => { setPercentage(e.target.value) }} />% du prix</div>
                   </div>
                 </div>
                 <div className="p-1 ">
                   <div className='d-flex align-items-center '>
-                    <span className='d-flex'>Fix cashback</span>
-                    <div><input className='inputNumber' required type="Number" min="0" max="10" value={fixCashback} onChange={(e) => { setFixCashback(e.target.value) }} />of Token(s)</div>
+                    <span className='d-flex'>Fixe cashback</span>
+                    <div><input className='inputNumber' required type="Number" min="0" max="10" value={fixCashback} onChange={(e) => { setFixCashback(e.target.value) }} />de Token(s)</div>
                   </div>
                 </div>
               </div>
@@ -385,7 +385,7 @@ export default function Create() {
           }
           <div className="formSection">
             <div className='d-flex justify-content-between px-4'>
-              <button type='submit' onClick={(e) => { handelSubmitForm(e) }} className="btn btn-primary" disabled="">Create</button>
+              <button type='submit' onClick={(e) => { handelSubmitForm(e) }} className="btn btn-primary" disabled="">Créer</button>
             </div>
           </div>
         </form >
@@ -396,15 +396,15 @@ export default function Create() {
         <div className="modal-dialog modal-dialog-scrollable">
           <div className="modal-content">
             <div className="modal-header">
-              <h5 className="modal-title" id="ModalPropertyLabel">Add Properties</h5>
+              <h5 className="modal-title" id="ModalPropertyLabel">Ajouter des propriétés</h5>
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div className="modal-body modal-dialog-scrollable">
-              <h6>Properties show up underneath your item, are clickable, and can be filtered in your collection's sidebar.</h6>
+              <h6>Les propriétés s'affichent sous votre article, sont cliquables et peuvent être filtrées dans la barre latérale de votre collection.</h6>
               <div className='addOption'>
                 <div className='rowFirst'>
-                  <h6>Type</h6>
-                  <h6>Name</h6>
+                  <h6>Genre</h6>
+                  <h6>Nom</h6>
                 </div>
                 {proOption.map((row, index) =>
                   <div key={index} className='option'>
@@ -414,10 +414,10 @@ export default function Create() {
                   </div>
                 )}
               </div>
-              <button className='btn btn-outline-primary mt-3' onClick={() => setProOption([...proOption, { trait_type: "", value: "" }])} >Add More</button>
+              <button className='btn btn-outline-primary mt-3' onClick={() => setProOption([...proOption, { trait_type: "", value: "" }])} >Ajouter plus</button>
             </div>
             <div className="modal-footer">
-              <button type="button" className="btn btn-outline-primary mx-auto" data-bs-dismiss="modal">Save</button>
+              <button type="button" className="btn btn-outline-primary mx-auto" data-bs-dismiss="modal">Sauvegarder</button>
             </div>
           </div>
         </div>
@@ -427,23 +427,23 @@ export default function Create() {
         <div className="modal-dialog modal-dialog-scrollable">
           <div className="modal-content">
             <div className="modal-header">
-              <h5 className="modal-title" id="ModalLevelLabel">Add Levels</h5>
+              <h5 className="modal-title" id="ModalLevelLabel">Ajouter des niveaux</h5>
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div className="modal-body modal-dialog-scrollable">
-              <h6>Levels show up underneath your item, are clickable, and can be filtered in your collection's sidebar.</h6>
+              <h6>Les niveaux s'affichent sous votre article, sont cliquables et peuvent être filtrés dans la barre latérale de votre collection.</h6>
               <div className='addOption'>
                 <div className='rowFirst'>
-                  <h6>Name</h6>
-                  <h6>value</h6>
+                  <h6>Nom</h6>
+                  <h6>Valeur</h6>
                 </div>
                 {levelOption.map((row, index) =>
                   <div key={index} className='option'>
-                    <span className='icon' onClick={() => { handelRemoveLevel(index) }}>close</span>
+                    <span className='icon' onClick={() => { handelRemoveLevel(index) }}>Fermer</span>
                     <input className='optionType' type="text" name='trait_type' onChange={(e) => { handelChangeLevel(e, index) }} value={row.trait_type} placeholder="speed" ></input>
                     <div className='optLevel'>
                       <input className='level1' type="number" min={0} max={row.value2} name='value' onChange={(e) => { handelChangeLevel(e, index) }} value={row.value}></input>
-                      <span>of</span>
+                      <span>de</span>
                       <input className='level2' type="number" min={0} name='value2' onChange={(e) => { handelChangeLevel(e, index) }} value={row.value2}></input>
                     </div>
                   </div>
@@ -452,7 +452,7 @@ export default function Create() {
               <button className='btn btn-outline-primary mt-3' onClick={() => setLevelOption([...levelOption, { trait_type: "", value: "3", value2: "5" }])} >Add More</button>
             </div>
             <div className="modal-footer">
-              <button type="button" className="btn btn-outline-primary mx-auto" data-bs-dismiss="modal">Save</button>
+              <button type="button" className="btn btn-outline-primary mx-auto" data-bs-dismiss="modal">Sauvegarder</button>
             </div>
           </div>
         </div>
@@ -462,23 +462,23 @@ export default function Create() {
         <div className="modal-dialog modal-dialog-scrollable">
           <div className="modal-content">
             <div className="modal-header">
-              <h5 className="modal-title" id="ModalStatsLabel">Add Stats</h5>
+              <h5 className="modal-title" id="ModalStatsLabel">Ajouter des statistiques</h5>
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div className="modal-body modal-dialog-scrollable">
-              <h6>Stats show up underneath your item, are clickable, and can be filtered in your collection's sidebar.</h6>
+              <h6>Les statistiques s'affichent sous votre article, sont cliquables et peuvent être filtrées dans la barre latérale de votre collection.</h6>
               <div className='addOption'>
                 <div className='rowFirst'>
-                  <h6>Name</h6>
-                  <h6>value</h6>
+                  <h6>Nom</h6>
+                  <h6>Valeur</h6>
                 </div>
                 {statsOption.map((row, index) =>
                   <div key={index} className='option'>
-                    <span className='icon' onClick={() => { handelRemoveStats(index) }}>close</span>
+                    <span className='icon' onClick={() => { handelRemoveStats(index) }}>Fermer</span>
                     <input className='optionType' type="text" name='trait_type' onChange={(e) => { handelChangeStats(e, index) }} value={row.trait_type} placeholder="speed" ></input>
                     <div className='optLevel'>
                       <input className='level1' type="number" min={0} max={row.value2} name='value' onChange={(e) => { handelChangeStats(e, index) }} value={row.value}></input>
-                      <span>of</span>
+                      <span>de</span>
                       <input className='level2' type="number" min={0} name='value2' onChange={(e) => { handelChangeStats(e, index) }} value={row.value2}></input>
                     </div>
                   </div>
@@ -487,7 +487,7 @@ export default function Create() {
               <button className='btn btn-outline-primary mt-3' onClick={() => setStatsOption([...statsOption, { trait_type: "", value: "3", value2: "5" }])} >Add More</button>
             </div>
             <div className="modal-footer">
-              <button type="button" className="btn btn-outline-primary mx-auto" data-bs-dismiss="modal">Save</button>
+              <button type="button" className="btn btn-outline-primary mx-auto" data-bs-dismiss="modal">Sauvegarder</button>
             </div>
           </div>
         </div>

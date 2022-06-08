@@ -178,7 +178,7 @@ export default function ShowNFT() {
     return (<>
         {allNFTs.reFormed === "loading" && <div className="topLoading"></div>}
         {showNFT.Status === "loading" ? <Loading/>
-            : showNFT.Status === "rejected" ? <h1>NFT Showing Error</h1>
+            : showNFT.Status === "rejected" ? <h1>NFT montrant une erreur</h1>
                 : showNFT.Status === "idle" && <div className="showNFT_continer">
                     <div className="row align-items-start">
                         <div className="col-md-5">
@@ -198,13 +198,13 @@ export default function ShowNFT() {
                                     <span className="icon" data-bs-toggle="collapse" data-bs-target="#tagMore4">expand_more</span>
                                 </div>
                                 <div id="tagMore4" className="tagMore collapse show">
-                                    <p>Created By <a href="">{showNFT.NFT.owner}</a></p>
+                                    <p>CCréer par <a href="">{showNFT.NFT.owner}</a></p>
                                     <p>{showNFT.NFT.metadata.description}</p>
                                 </div>
                             </div>
                             <div className="tagItem">
                                 <div className="tagHead">
-                                    <div className="d-flex align-items-center"><span className="icon">label_important</span><h6>Properties</h6></div>
+                                    <div className="d-flex align-items-center"><span className="icon">label_important</span><h6>Propriétés</h6></div>
                                     <span className="icon" data-bs-toggle="collapse" data-bs-target="#tagMore5">expand_more</span>
                                 </div>
                                 <div id="tagMore5" className="tagMore collapse">
@@ -221,7 +221,7 @@ export default function ShowNFT() {
                             </div>
                             <div className="tagItem">
                                 <div className="tagHead">
-                                    <div className="d-flex align-items-center"><span className="icon">star_rate</span><h6>Levels</h6></div>
+                                    <div className="d-flex align-items-center"><span className="icon">star_rate</span><h6>Niveaux</h6></div>
                                     <span className="icon" data-bs-toggle="collapse" data-bs-target="#tagMore6">expand_more</span>
                                 </div>
                                 <div id="tagMore6" className="tagMore collapse">
@@ -250,7 +250,7 @@ export default function ShowNFT() {
                                 </div>
                                 <div id="tagMore8" className="tagMore collapse show">
                                     <div className="d-flex align-items-center justify-content-between py-2">
-                                        <span>Contract Address</span>
+                                        <span>Adresse du contrat</span>
                                         <a href={"/ShowNFT/" + showNFT.NFT.chain + "/" + showNFT.NFT.contractAddress + "/" + showNFT.NFT.tokenId}>{showNFT.NFT.contractAddress.substring(0, 4)}...{showNFT.NFT.contractAddress.substring(showNFT.NFT.contractAddress.length - 4, showNFT.NFT.contractAddress.length)}</a>
                                     </div>
                                     <div className="d-flex align-items-center justify-content-between py-2">
@@ -272,9 +272,9 @@ export default function ShowNFT() {
                             <div className="d-flex justify-content-between w-100 py-2">
                                 <span className="d-flex align-items-center headcollect">{showNFT.NFT.metadata.name}<span className="icon ps-1 font-size-large text-primary">verified</span></span>
                                 <div className="tools">
-                                    <span className="icon">replay</span>
-                                    <span className="icon">open_in_new</span>
-                                    <span className="icon">share</span>
+                                    <span className="icon">rejouer</span>
+                                    <span className="icon">ouvert en nouveau</span>
+                                    <span className="icon">partager</span>
                                     <span className="icon">more_vert</span>
                                 </div>
                             </div>
@@ -286,11 +286,11 @@ export default function ShowNFT() {
                             </div>
                             <div className="sellInfo">
                                 <div className="d-flex align-items-center justify-content-between p-3">
-                                    <h6 className="d-flex align-items-center m-0"><span className="icon pe-2">schedule</span> auctions features add in next Update  </h6>
+                                    <h6 className="d-flex align-items-center m-0"><span className="icon pe-2">schedule</span> fonctionnalités d'enchères ajoutées dans la prochaine mise à jour  </h6>
                                     <span className="icon">info</span>
                                 </div>
                                 <div className="price">
-                                    <p>Current price</p>
+                                    <p>Prix actuel</p>
                                     {(isListed && currentPrice != "") && <div className="buy">
                                         <span>{currentPrice}<small>{showNFT.NFT.chain}</small></span>
                                         <img src={window.location.origin + "/Images/unitIcon/" + showNFT.NFT.chain + ".png"} alt="" />{showNFT.price}
@@ -305,17 +305,17 @@ export default function ShowNFT() {
                             </div>
                             <div className="tagItem">
                                 <div className="tagHead">
-                                    <div className="d-flex align-items-center"><span className="icon">insights</span><h6>Price History</h6></div>
+                                    <div className="d-flex align-items-center"><span className="icon">insights</span><h6>Historique de prix</h6></div>
                                     <span className="icon" data-bs-toggle="collapse" data-bs-target="#tagMore1">expand_more</span>
                                 </div>
                                 <div id="tagMore1" className="tagMore collapse show">
                                     <div>
                                         <select className="chartTime col-sm-6">
-                                            <option value="All">All time</option>
-                                            <option value="7Week">Last week</option>
-                                            <option value="1Month">Last month</option>
-                                            <option value="3Month">Last 3 months</option>
-                                            <option value="1Year">Last year</option>
+                                            <option value="All">Tout le temps</option>
+                                            <option value="7Week">Dernière semaine</option>
+                                            <option value="1Month">Dernier mois</option>
+                                            <option value="3Month">3 derniers mois</option>
+                                            <option value="1Year">Dernière année</option>
                                         </select>
                                     </div>
                                     <Chart data={chartData}
@@ -354,10 +354,10 @@ export default function ShowNFT() {
                                 </div>
                                 <div id="tagMore2" className="tagMore collapse">
                                     <div className="listTitle">
-                                        <span>Price</span>
-                                        <span>Seller</span>
+                                        <span>Prix</span>
+                                        <span>Vendeur</span>
                                         <span>ListingId</span>
-                                        <span>Buyer</span>
+                                        <span>Acheteur</span>
                                     </div>
                                     <ul className="listContent">
                                         {listings.map((row, index) =>
@@ -365,16 +365,16 @@ export default function ShowNFT() {
                                                 <span><img src={window.location.origin + "/Images/unitIcon/" + showNFT.NFT.chain + ".png"} />{row.price}</span>
                                                 <span>{row.seller}</span>
                                                 {row.state === "0"
-                                                    ? <span className="text-primary">Initialized</span>
+                                                    ? <span className="text-primary">Initialisé</span>
                                                     : row.state === "1"
-                                                        ? <span className="text-success">Sold</span>
+                                                        ? <span className="text-success">Vendu</span>
                                                         : row.state === "2"
-                                                        && <span className="text-danger">Cancelled</span>
+                                                        && <span className="text-danger">Annulé</span>
                                                 }
-                                                {(row.buyer === "0x0000000000000000000000000000000000000000") ? <span>No Buyer</span> : <span>{row.buyer}</span>}
+                                                {(row.buyer === "0x0000000000000000000000000000000000000000") ? <span>Pas d'acheteur</span> : <span>{row.buyer}</span>}
                                                 <span >
-                                                    {((row.state === "0") && (!isOwner)) && <button onClick={() => buyNFT(row)} className="btn btn-outline-primary">Buy</button>}
-                                                    {((row.state === "0") && (isOwner)) && <button onClick={() => cancelList(row)} className="btn btn-outline-danger">Cancel</button>}
+                                                    {((row.state === "0") && (!isOwner)) && <button onClick={() => buyNFT(row)} className="btn btn-outline-primary">Acheter</button>}
+                                                    {((row.state === "0") && (isOwner)) && <button onClick={() => cancelList(row)} className="btn btn-outline-danger">Annuler</button>}
                                                 </span>
                                             </li>
                                         )}
@@ -388,11 +388,11 @@ export default function ShowNFT() {
                                 </div>
                                 <div id="tagMore3" className="tagMore collapse">
                                     <div className="listTitle">
-                                        <span>Price</span>
-                                        <span>USD Price</span>
+                                        <span>Prix</span>
+                                        <span>USD Prix</span>
                                         <span>Floor Difference</span>
                                         <span>Expiration</span>
-                                        <span>From</span>
+                                        <span>De</span>
                                     </div>
                                     <ul className="listContent">
                                         {/* need backend */}

@@ -19,7 +19,7 @@ export default function Navbar() {
                 <div className="container-fluid w-100">
                     <div className="navbar-brand position-relative">
                         <img src='Images/Brand/NFTMArket.png' alt="" width="30" className="d-inline-block align-text-top me-2" />
-                        NFT Market
+                        RIAD
                         {network === "testNet" && <small className='position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger'>({network})</small>}
                         {network === "mainNet" && <small className='position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary'>({network})</small>}
                     </div>
@@ -30,8 +30,8 @@ export default function Navbar() {
                         <li className='nav-item dropdown out px-1'>
                             <span className='icon dropdown-toggle ' id="navbarDropdown" role="button">account_circle</span>
                             <ul className="dropdown-menu px-3" aria-labelledby="navbarDropdown">
-                                <li><Link className="dropdown-item" to={"/Collection/walletNFTs"}>My NFTs</Link></li>
-                                <li><a className="dropdown-item" onClick={() => dispatch(modalChekWallet())}>Connect to Wallet</a></li>
+                                <li><Link className="dropdown-item" to={"/Collection/walletNFTs"}>Mes NFTs</Link></li>
+                                <li><a className="dropdown-item" onClick={() => dispatch(modalChekWallet())}>Connecté au portefeuille</a></li>
                                 <li>
                                    {network === "testNet" &&<a className="dropdown-item text-primary" onClick={() => dispatch(switchNetwork("mainNet"))}>switch to mainNet</a>}
                                    {network === "mainNet" &&<a className="dropdown-item text-danger" onClick={() => dispatch(switchNetwork("testNet"))}>switch to testNet</a>}
@@ -54,8 +54,8 @@ export default function Navbar() {
                                 <li className='nav-item dropdown out px-1'>
                                     <span className='icon dropdown-toggle nav-link' id="navbarDropdown" role="button">account_circle</span>
                                     <ul className="dropdown-menu px-3" aria-labelledby="navbarDropdown">
-                                        <li><Link className="dropdown-item" to={"/Collection/walletNFTs"}>My NFTs</Link></li>
-                                        <li><a className="dropdown-item" href="/">Connect to Wallet</a></li>
+                                        <li><Link className="dropdown-item" to={"/Collection/walletNFTs"}>Mes NFTs</Link></li>
+                                        <li><a className="dropdown-item" href="/">Connecté au portefeuille</a></li>
                                     </ul>
                                 </li>
                                 <li className='nav-item out px-1'>
@@ -63,16 +63,16 @@ export default function Navbar() {
                                 </li>
                             </div>
                             <li className="nav-item" onClick={(e) => activTab(e)}>
-                                <Link className='nav-link itemActiv' to={'/'}>Home</Link>
+                                <Link className='nav-link itemActiv' to={'/'}>Accueil</Link>
                             </li>
                             <li className="nav-item" onClick={(e) => activTab(e)}>
-                                <Link className='nav-link ' to={'/Explore'}>Explore</Link>
+                                <Link className='nav-link ' to={'/Explore'}>Explorer</Link>
                             </li>
                             <li className="nav-item" onClick={(e) => activTab(e)}>
-                                <Link className='nav-link' to={"/Create"}>CreateNFT</Link>
+                                <Link className='nav-link' to={"/Create"}>Créer</Link>
                             </li>
                             <li className="nav-item" onClick={(e) => activTab(e)}>
-                                <Link className='nav-link' to={"/Contract"}>DeployContract</Link>
+                                <Link className='nav-link' to={"/Contract"}>Déployer</Link>
                             </li>
                         </ul>
                     </div>

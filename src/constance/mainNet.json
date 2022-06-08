@@ -11,7 +11,7 @@
                 "chainName": "Ethereum Mainnet",
                 "chainId": "0x1",
                 "rpcUrls": [
-                    "https://mainnet.infura.io/v3/"
+                    "https://mainnet.infura.io/v3/58f2d53d1cb2429ab99f1b5ac8d8ca0c"
                 ],
                 "blockExplorerUrls": [
                     "https://etherscan.io"
@@ -56,19 +56,19 @@
     "marketplace":[
         {
             "name" : "ETH",
-            "address": "...",
+            "address": "0x0B0498B870386E3695a86eab9f7fcfE6D9006B2B",
             "marketFee":"0.025"
         },
         {
             "name" : "MATIC",
-            "address":"...",
+            "address":"0x0B0498B870386E3695a86eab9f7fcfE6D9006B2B",
             "marketFee":"0.025"
         },
         {
             "name" : "CELO",
-            "address":"...",
+            "address":"0x0B0498B870386E3695a86eab9f7fcfE6D9006B2B",
             "marketFee":"0.025"
         }
     ],
-    "API_KEY":"..."
+    "API_KEY":"2878151c-47b6-4abc-bbbc-a4e756daf98d"
 }

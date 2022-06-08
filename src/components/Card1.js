@@ -20,7 +20,7 @@ export default function Card1(props) {
                         <h3>Price:{props.info.price}<img alt='' className='unit' src={'Images/unitIcon/' + props.info.unit + '.png'} /></h3>
                     </div>
                     <div className='details'>{props.info.details}</div>
-                    <a href={"/ShowNFT/"+props.info.chain+"/"+props.info.address+"/"+props.info.tokenId}>More Info</a>
+                    <a href={"/ShowNFT/"+props.info.chain+"/"+props.info.address+"/"+props.info.tokenId}>Plus d'infos</a>
                 </div>
             </div>
         </div>

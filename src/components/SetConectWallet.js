@@ -34,7 +34,7 @@ export default function SetConectWallet() {
                     <div className="modal-dialog">
                         <div className="modal-content">
                             <div className="modal-header">
-                                <h6 className=" w-100 text-center m-0">You need an Ethereum wallet</h6>
+                                <h6 className=" w-100 text-center m-0">Vous avez besoin d'un portefeuille Ethereum</h6>
                                 <button type="button" className="btn-close" onClick={() => dispatch(modalChekWallet())}></button>
                             </div>
                             <div className="modal-body d-flex flex-column align-items-center">
@@ -43,7 +43,7 @@ export default function SetConectWallet() {
                                         <img src={window.location.origin + "/Images/icon/metamask.webp"} alt="" />
                                         <span>Metamask</span>
                                     </div>
-                                    <a href="https://metamask.io/download/">download Metamask</a>
+                                    <a href="https://metamask.io/download/">Télécharger Metamask</a>
                                 </div>
                             </div>
                         </div>
@@ -58,7 +58,7 @@ export default function SetConectWallet() {
                         <div className="modal-body d-flex flex-column align-items-center">
                             <div className="modal-body d-flex flex-column align-items-center">
                                 <div className="idle alert alert-success">
-                                    wallet is conecting...
+                                    Connection au portefeuille...
                                     <div className="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
                                 </div>
                             </div>
@@ -67,7 +67,7 @@ export default function SetConectWallet() {
                     {status === "idle" &&
                         <div className="modal-body d-flex flex-column align-items-center">
                             <div className="idle alert alert-success">
-                                wallet conected successfully
+                                Connection au portefeuille réussi
                                 <img src={window.location.origin + "/Images/icon/success.png"} alt="" onLoad={() => success()} />
                             </div>
                         </div>
@@ -75,7 +75,7 @@ export default function SetConectWallet() {
                     {status === "rejected" &&
                         <div className="modal-body d-flex flex-column align-items-center">
                             <div className="idle alert alert-danger">
-                                wallet conect has Error
+                                Erreur de connection au portefeuille
                                 <img src={window.location.origin + "/Images/icon/fail.png"} alt="" onLoad={() => success()} />
                             </div>
                         </div>
