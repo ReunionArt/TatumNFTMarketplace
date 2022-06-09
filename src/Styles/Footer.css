@@ -16,9 +16,10 @@ footer {
 
 footer p {
     font-size: 13px;
-    color: var(--textDark);
+    color: var(--hoverLi);
     padding-bottom: 0px;
     margin-bottom: 8px;
+    color: azure;
 }
 
 .mb10 {
@@ -43,6 +44,7 @@ footer p {
 .footer_ul_amrc li a:hover {
     color: var(--hoverLi);
     text-decoration: none;
+    color: gold;
 }
 
 .fleft {
@@ -61,10 +63,16 @@ footer p {
 
 .footer_ul2_amrc li p {
     display: table;
+    color: var(--hoverLi);
 }
 
+.footer_ul2_amrc li a {
+    display: table;
+    color: var(--hoverLi);
+}
 .footer_ul2_amrc li a:hover {
     text-decoration: none;
+    color: gold;
 }
 
 .footer_ul2_amrc li i {
@@ -91,7 +99,7 @@ footer p {
 }
 
 .foote_bottom_ul_amrc li a {
-    color: var(--textDark);
+    color: var(--hoverLi);
     margin: 0 12px;
 }
 
@@ -108,7 +116,7 @@ footer p {
 }
 
 .social_footer_ul li a {
-    color: var(--textDark);
+    color: var(--hoverLi);
     padding: 8px;
     border-radius: 50%;
 }

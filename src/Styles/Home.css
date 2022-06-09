@@ -40,6 +40,9 @@
     font-size: 4.5vw;
     font-family: 'Poppins-ExtraBold';
     text-align: justify;
+    background: -webkit-linear-gradient(45deg, rgb(255, 255, 255) 0%, rgb(121, 101, 9) 35%, rgb(255, 183, 0) 100%);
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   }
   @media (max-width:1199.5px) {
     .BarandHeader{
@@ -146,7 +149,7 @@
   font-family:'Poppins' ;
   font-size: 1.5em;
   padding: 1rem;
-  color: #fff;
+  color: linear-gradient(90deg, rgba(0,18,36,1) 0%, rgba(9,71,121,1) 35%, rgba(0,212,255,1) 100%);
 }
 .News button {
   padding: 0.5rem;
@@ -195,8 +198,14 @@
   margin: 0;
 }
 .trend button{
-  padding: 0;
-  text-align: left;
+  padding: 0.5rem;
+  border-radius: 7px;
+}
+.trend button a {
+  color: var(--textBtn);
+}
+.trend button:hover {
+  border: 0.5px solid var(--textBtn);
 }
 #ModalWelcom{
   position: fixed;

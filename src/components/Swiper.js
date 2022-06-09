@@ -22,7 +22,7 @@ export default function SwiperSlider() {
   return (
     <>
     {auction.list.map((row,index)=>
-    <style key={index}>{"#s" + row.idnft + ":after{content:'';position: absolute; z-index: -1; width:100%;height: 100%;display: block; background-image:url(" + row.image + ");background-position: center;filter: blur(18px);}"}</style>
+    <style key={index}>{"#s" + row.idnft + ":after{content:'';position: absolute; z-index: -1; width:100%;height: 100%;display: block; background-image:url(" + row.image + ");background-position: top;filter: blur(18px);}"}</style>
     )}
       <Swiper
         effect={"cards"}
@@ -39,7 +39,7 @@ export default function SwiperSlider() {
         {auction.list.map((row,index)=>
         <SwiperSlide key={index}>
           <>
-          <div className="w-100 h-100 d-flex align-items-center position-relative" id={"s"+row.idnft} >
+          <div className="w-100 h-100 d-flex align-items-top position-relative" id={"s"+row.idnft} >
           <img className="slidPic" src={row.image} alt=""/>
           </div>
         </>

@@ -49,15 +49,10 @@ export default function Home() {
   return (
     <>
       <header onLoad={() => { window.dispatchEvent(event); }} className="row justify-content-evenly align-items-center w-100 mx-auto overflow-hidden">
-        <div className="col-xl-7 row justify-content-center align-items-center">
-          <div className="logoFix col-sm-6">
+        <div className="col-xl-7 row justify-content-center align-items-top">
+          <div className="logoFix col-sm-2">
             <div style={{ 'transformOrigin': 'top left' }} className="Logo d-flex position-relative">
-              <img id="logoPath" src="./Images/Brand/NFTMArket.png" alt="" />
-              <div className="wrapper">
-                <div className="obj">
-                  <img src="./Images/star.png" alt="" />
-                </div>
-              </div>
+              <img id="logoPath" src="./Images/Brand/NFTMArket.png" alt="RIAD" height={400}/>
             </div>
           </div>
           <div className="col-sm-6">
@@ -65,7 +60,7 @@ export default function Home() {
             <h2 className="detaleBrand">{homePage.discribtion}</h2>
           </div>
         </div>
-        <div className="col-xl-4 pt-3 pb-3 row align-items-center ">
+        <div className="col-xl-4 pt-3 pb-3 row align-items-top ">
           <SwiperSlider></SwiperSlider>
         </div>
       </header>

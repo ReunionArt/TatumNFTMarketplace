@@ -131,9 +131,9 @@
     -webkit-appearance: none;
     padding: 7px 40px 7px 12px;
     width: 100%;
-    border: 1px solid #e8eaed;
+    border: 1px solid #000000;
     border-radius: 5px;
-    background: #fff;
+    background: rgb(0, 0, 0);
     box-shadow: 0 1px 3px -2px #9098a9;
     cursor: pointer;
     font-family: inherit;
@@ -141,21 +141,21 @@
     transition: all 150ms ease;
   }
   .select select:required:invalid {
-    color: #5a667f;
+    color: #ffffff;
   }
   .select select option {
-    color: #223254;
+    color: #ffffff;
   }
   .select select option[value=""][disabled] {
     display: none;
   }
   .select select:focus {
     outline: none;
-    border-color: #07f;
+    border-color: rgb(255, 183, 0);
     box-shadow: 0 0 0 2px rgba(0,119,255,0.2);
   }
   .select select:hover + svg {
-    stroke: #07f;
+    stroke: rgb(255, 183, 0);
   }
   .sprites {
     position: absolute;
@@ -219,18 +219,18 @@
 }
 .check input:checked ~.back{
     border-color: var(--activeLi);
-    background-color: rgb(132, 185, 246);
+    background-color: rgb(54, 77, 103);
 }
 .check input:checked ~.circle{
     left: calc(100% - 22px);
-    background-color: #07f;
+    background-color: rgb(255, 183, 0);
 
 }
 .check input:checked ~.circle::after{
     content:"done";
     font-family: 'Material Icons outLine';
     font-size: 1em;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 .toolip{
   position: relative;
@@ -430,7 +430,7 @@ input[type=radio]:checked ~.category::after,input[type=checkbox]:checked ~.categ
   color: var(--activeLi);
   width: 0.8em;
   height: 0.8em;
-  background-color: white;
+  background-color: rgb(0, 0, 0);
   position: absolute;
   top: -0.3em;
   right: -0.15em;
