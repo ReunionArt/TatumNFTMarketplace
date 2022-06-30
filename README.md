@@ -32,7 +32,7 @@ Create, sell, buy all kind of NFTs and deploy smart contract and other option
 ## About The Project
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
-[Screenshot1](https://github.com/ReunionArt/TatumNFTMarketplace/blob/a680a1f862ab3e3f49f5601e1b18c0ec3ec8598c/public/Images/Screenshot1.png)
+![screenshot](https://github.com/ReunionArt/TatumNFTMarketplace/blob/a680a1f862ab3e3f49f5601e1b18c0ec3ec8598c/public/Images/Screenshot1.png)
 
 Marketplace NFT help users to create, sell, buy and view non-fungible token (NFT)
 
