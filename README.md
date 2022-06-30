@@ -32,7 +32,7 @@ Create, sell, buy all kind of NFTs and deploy smart contract and other option
 ## About The Project
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
-![screenshot](https://user-images.githubusercontent.com/92023968/172676012-17111bfb-3bd2-4d83-a7f0-e95f890e278b.jpg)
+<img src="../public/images/Screenshot1.png " alt="screenshot1"/>
 
 Marketplace NFT help users to create, sell, buy and view non-fungible token (NFT)
 
@@ -230,8 +230,8 @@ for mint all kind of NFTs
 
 ## Contact
 
-shahedmoez - [shahedmoez](shahedmoez@gmail.com)
+RICL - [RICL](admin@ricl.re)
 
-Project Link: [https://github.com/shahedmoez/TatumNFTMarketplace](https://github.com/shahedmoez/TatumNFTMarketplace)
+Project Link: [https://github.com/ReunionArt/TatumNFTMarketplace](https://github.com/ReunionArt/TatumNFTMarketplace)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
